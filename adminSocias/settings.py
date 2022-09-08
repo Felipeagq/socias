@@ -87,12 +87,12 @@ WSGI_APPLICATION = 'adminSocias.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'socias_dev',
-        'USER': 'socias_dev',
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'socias_db',
+        'USER': 'root',
         'PASSWORD': 'neero_db',
         'HOST': '18.220.255.146',
-        'PORT': '5432',
+        'PORT': '3306',
     }
 }
 

@@ -71,6 +71,8 @@ en PDF de los integrantes del equipo.""",null=True,blank=True
     fecha_creacion_empresa = models.DateField(null=True,blank=True, help_text="Fecha en la que se creó o se fundó la empresa")
     fecha_creacion_socias = models.DateField(null=True,blank=True,default=datetime.now(),help_text="Fecha en la que creó el proyecto en Socias, por defecto")
 
+    activo = models.BooleanField(default=True)
+
     categoria = models.ForeignKey(Categorias,on_delete=models.CASCADE,null=True,blank=True,help_text="Categorias a las cuales se posa el proyecto")
     etiquetas = models.ForeignKey(Etiquetas,on_delete=models.CASCADE,default=1,null=False, blank=True,help_text="etiquetas del proyecto")
     usuarios = models.ForeignKey(UsuarioSociasModel,on_delete=models.CASCADE,null=True,blank=True,help_text="Usuario que creoó el proyecto")
