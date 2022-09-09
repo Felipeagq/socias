@@ -94,7 +94,7 @@ class Publicaciones(models.Model):
     fecha = models.DateField()
 
     def __str__(self):
-        return self.Titulo
+        return self.titulo
 
     class Meta:
         verbose_name_plural = "Publicaciones"
